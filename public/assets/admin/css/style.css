@@ -1,0 +1,305 @@
+body.admin-page {
+  background-color: #f7f8ff; /* warna lembut seperti di gambar */
+  min-height: 100vh;
+  display: flex;
+}
+.dashboard-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 30px 0;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+.dashboard-title {
+  font-weight: 600;
+  color: #7a7a7a;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.dashboard-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  margin-top: 10px;
+}
+
+.sidebar {
+  width: 250px;
+  background: #0a3a04;
+  color: #fff;
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
+  height: 100vh;
+  position: fixed; /* wajib */
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  z-index: 1000;
+  display: flex; /* penting! */
+  flex-direction: column; /* supaya konten disusun vertikal */
+}
+
+.sidebar-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 30px; /* biar scroll tidak kepotong */
+  scroll-behavior: smooth;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  transition: 0.25s ease;
+  font-size: 15px;
+}
+
+/* Hover */
+.sidebar-link:hover {
+  color: #000000;
+}
+
+.sidebar-link:hover i {
+  color: #000000;
+}
+
+/* Active */
+.sidebar-link.active {
+  background-color: #0c4205;
+  border-left-color: #000000;
+  color: #000000;
+  font-weight: 800;
+}
+
+.sidebar-link.active i {
+  color: #000000;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 6px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar-content:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  padding: 10px 15px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: 70px;
+  background: #f8f9fa;
+  margin-left: 250px; /* beri ruang untuk sidebar */
+  transition: margin-left 0.3s ease;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 250px; /* sesuaikan lebar sidebar kamu */
+  right: 0;
+  height: 60px;
+  background: #fff;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.close-btn {
+  display: none;
+  font-size: 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+/* TOMBOL LOGIN  */
+.login-container {
+  max-width: 900px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-image {
+  background: url("../img/sawah.jpeg") center center/cover no-repeat;
+  min-height: 500px;
+}
+
+.login-form {
+  padding: 40px 30px;
+}
+
+.login-form img {
+  width: 100px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.btn-primary {
+  background-color: #0a3a04;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #093004;
+}
+
+/* HALAMAN LOGIN */
+body.login-page {
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+.app-auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.auth-main-col {
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-background-col {
+  position: relative;
+  background: url("../img/login-bg.jpeg") center center/cover no-repeat;
+}
+
+.auth-background-col::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.app-auth-body {
+  width: 100%;
+  max-width: 400px;
+}
+
+.app-logo img {
+  height: 90px;
+}
+
+.logo-admin {
+  text-align: center;
+  padding: 2px 0;
+}
+
+.logo-img img {
+  height: 40px;
+}
+
+.logo-admin h2 {
+  font-weight: 700;
+  font-size: small;
+}
+
+.auth-heading {
+  font-weight: 700;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px; /* beri ruang untuk ikon */
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.password-wrapper .toggle-password:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .auth-background-col {
+    display: none;
+  }
+
+  .sidebar {
+    transform: translateX(-100%); /* default tersembunyi */
+  }
+
+  .sidebar.active {
+    transform: translateX(0); /* muncul */
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100% !important;
+  }
+
+  .topbar {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
+  }
+}
